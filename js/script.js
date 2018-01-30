@@ -16,17 +16,21 @@
 //****************** SERIOUSLY TEST USING console.log()!!! ******************
 
 // Songs
+
+// DOCUMENT READY FUNCTION
+$( document ).ready(function() { 
+ 	
 var mySong = {
-	"title":"24K Magic",
-	"artist":"Bruno Mars",
-	"mp3-url":"https://open.spotify.com/track/6b8Be6ljOzmkOmFslEb23P",
-	"image-url":"https://images-na.ssl-images-amazon.com/images/I/71Gr9aCHQfL._SY355_.jpg",
+	"title":"Lost Boy",
+	"artist":"Ruth B",
+	"mp3_url":"https://open.spotify.com/track/6b8Be6ljOzmkOmFslEb23P",
+	"image_url":"http://coverlandia.net/sites/default/files/artworks/music/11401471081031.jpg",
 }
 
 var myPlayList = [
 	{
-		"title":"24K Magic",
-		"artist":"Bruno Mars",
+		"title":"Lost Boy",
+		"artist":"Ruth B",
 		"mp3-url":"https://open.spotify.com/track/6b8Be6ljOzmkOmFslEb23P",
 		"image-url":"https://images-na.ssl-images-amazon.com/images/I/71Gr9aCHQfL._SY355_.jpg",
 	},
@@ -47,16 +51,17 @@ var myPlayList = [
 
 
 
-// DOCUMENT READY FUNCTION
-$( document ).ready(function() {
-  
+displayList();
 
 
 
-});
+
 
 function displayList(){
-
+	
+$(".songs").append("<p> Title: "+ mySong.title +"</p>");
+$(".songs").append("<p> Artist: "+ mySong.artist + "</p>");
+$(".songs").append("<img src=" + mySong.image_url + ">");
 
   
 }
@@ -72,3 +77,5 @@ function addSong(){
   
   
 }
+
+});
