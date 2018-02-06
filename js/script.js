@@ -23,16 +23,16 @@ $( document ).ready(function() {
 var mySong = {
 	"title":"Lost Boy",
 	"artist":"Ruth B",
-	"mp3_url":"https://open.spotify.com/track/6b8Be6ljOzmkOmFslEb23P",
+	"mp3_url":"https://open.spotify.com/track/4h0zU3O9R5xzuTmNO7dNDU",
 	"image_url":"http://coverlandia.net/sites/default/files/artworks/music/11401471081031.jpg",
 }
 
 var myPlayList = [
 	{
-		"title":"Lost Boy",
-		"artist":"Ruth B",
-		"mp3-url":"https://open.spotify.com/track/6b8Be6ljOzmkOmFslEb23P",
-		"image-url":"https://images-na.ssl-images-amazon.com/images/I/71Gr9aCHQfL._SY355_.jpg",
+		"title":"Mi Gente",
+		"artist":"J balvin ,Willy william",
+		"mp3_url":"https://open.spotify.com/album/1ZJtkYBzRb7drznu3UYb3k",
+		"image_url":"https://is5-ssl.mzstatic.com/image/thumb/Music117/v4/f0/88/9e/f0889e85-8207-2327-3a38-af1df2272ad5/17UM1IM08035.jpg/268x0w.jpg",
 	},
 	{
 		"title":"Sir Duke",
@@ -47,7 +47,7 @@ var myPlayList = [
 		"image-url":"http://assets-s3.usmagazine.com/uploads/assets/articles/93827-justin-biebers-sorry-choreographer-spills-video-style-secrets-parris-goebel/1445638548_justin-bieber-sorry-dancers-zoom.jpg",
 	}
 
-]
+]; 
 
 
 
@@ -59,11 +59,20 @@ displayList();
 
 function displayList(){
 	
-$(".songs").append("<p> Title: "+ mySong.title +"</p>");
-$(".songs").append("<p> Artist: "+ mySong.artist + "</p>");
-$(".songs").append("<img src=" + mySong.image_url + ">");
+	// $(".songs").append("<p> Title: "+ mySong.title +"</p>");
+	// $(".songs").append("<p> Artist: "+ mySong.artist + "</p>");
+	// $(".songs").append("<img src=" + mySong.image_url + ">");
+	// $(".songs").append("<a href = https://open.spotify.com/track/1rfofaqEpACxVEHIZBJe6W> <p>" + "Link to song" + "</p></a>" );
+	// $(".songs").append("<p> Title: " + myPlayList[0].title + ".</p>");
+	// $(".songs").append("<p> Artists: " + myPlayList[0].artist +".</p>");
+	// $(".songs").append("<img src=" + myPlayList[0].image_url + ">");
+	// $(".song").append("<a href =" + myPlayList[0].mp3_url+" ><p> Link to song</p> </a>");
+	
+	for( var x = 0; x < myPlayList.length; x = x+1){
+		$(".songs").append("<p> Title: " + myPlayList[x].title + "</p><p> By:"+ myPlayList[x].artist+"</p><img src=" + myPlayList[x].image_url + "> <a href =" + myPlayList[x].mp3_url + "<p> Link to song </p>");
 
-  
+	}
+
 }
 
 function clearList(){
