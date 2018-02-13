@@ -50,7 +50,7 @@ var myPlayList = [
 ]; 
 
 
-
+addSong();
 displayList();
 
 
@@ -82,7 +82,7 @@ function clearList(){
 }
 
 function addSong(){
- 
+myPlayList.push( { title:"Love Yourself", artist:"Justin Bieber", mp3_url:"song.com", image_url:"https://upload.wikimedia.org/wikipedia/en/0/0b/JustinBieberLoveYourself.png" } )
   
   
 }
