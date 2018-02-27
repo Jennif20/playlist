@@ -77,21 +77,19 @@ function displayList(){
 
 function clearList(){
   
-  $("#clearSongs").click(function(){
-  
+
   myPlayList.splice(0,myPlayList.length);
   	displayList();
-  	});
+  
   
 }
-
-clearList();
-
+$("#clearSongs").click(function(){
+  clearList();
+	});
 
 function addSong(){
 // myPlayList.push( { title:"Love Yourself", artist:"Justin Bieber", mp3_url:"https://open.spotify.com/track/50kpGaPAhYJ3sGmk6vplg0", image_url:"https://upload.wikimedia.org/wikipedia/en/0/0b/JustinBieberLoveYourself.png" } );
-	$("#addSong").click(function(){
-	
+
 		var songName = $("#title").val();
 		var artist =$("#artists").val();
 		var url = $("#mp3").val();
@@ -110,9 +108,10 @@ function addSong(){
 		myPlayList.push(newSong);
 		 displayList();
 
-	 });
+
 	 
 }
-
-displayList();
+	$("#addSong").click(function(){
+		addSong();
+	});
 });
